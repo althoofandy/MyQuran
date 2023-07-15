@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.surah.detailsurah.DetailSurahActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_200"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16sp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/tvJudulSurah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Al-fatiha"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alqalam"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tvJudulSurahArabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Al-fatiha"
+                            android:textSize="24sp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/alqalam"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2">
+
+                        <TextView
+                            android:id="@+id/tvArtiSurah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pembukaan"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/alqalam"
+                            android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/tvAyatSurah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7 Ayat"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/alqalam"
+                            android:gravity="end"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10sp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/alqalam"
+                            android:textStyle="bold"
+                            android:adjustViewBounds="true"
+                            android:text="Keterangan"/>
+
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/headerIndicator"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvDescSurah"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:hint="Keterangan"
+                            android:textIsSelectable="true"
+                            android:fontFamily="@font/alqalam"
+                            />
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAyatSurah"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_ayat"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/baseline_play_arrow"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

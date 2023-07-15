@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_pray"
+        android:icon="@drawable/praying"
+        android:title="Pray"
+        />
+
+    <item
+        android:id="@+id/navigation_surah"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_mosque"
+        android:icon="@drawable/masjid"
+        android:title="Mosque"
+        />
+
+</menu>

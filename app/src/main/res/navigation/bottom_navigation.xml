@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/navigation_surah">
+
+    <fragment
+        android:id="@+id/navigation_pray"
+        android:name="com.example.myquran.ui.pray.PrayFragment"
+        tools:layout="@layout/fragment_pray" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_surah"
+        android:name="com.example.myquran.ui.surah.SurahFragment"
+        tools:layout="@layout/fragment_surah" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_mosque"
+        android:name="com.example.myquran.ui.mosque.MosqueFragment"
+        tools:layout="@layout/fragment_mosque" />
+
+</navigation>
