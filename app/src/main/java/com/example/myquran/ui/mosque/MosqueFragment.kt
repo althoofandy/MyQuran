@@ -98,7 +98,7 @@ class MosqueFragment : Fragment(), OnMapReadyCallback {
         }
 
         private fun searchMosquesNearby(latitude: Double, longitude: Double) {
-            Places.initialize(requireContext(), "AIzaSyCOyoUP5nmBRA7wHXCPYmPoJVC0iByDJQM")
+            Places.initialize(requireContext(), "YOUR_API_KEY")
             val token = AutocompleteSessionToken.newInstance()
             val placesClient = Places.createClient(requireContext())
 

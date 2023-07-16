@@ -18,7 +18,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCOyoUP5nmBRA7wHXCPYmPoJVC0iByDJQM" />
+            android:value="YOUR_API_KEY" />
 
         <activity
             android:name=".ui.surah.detailsurah.DetailSurahActivity"
